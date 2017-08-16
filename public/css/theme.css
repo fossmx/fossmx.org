@@ -1,0 +1,113 @@
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  background: #eee;
+
+  /* Adam Morse, github.com/mrmrs */
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'Segoe UI', 'lucida grande', 'helvetica neue', helvetica, 'Fira Sans', roboto, noto, 'Droid Sans', cantarell, oxygen, ubuntu, 'franklin gothic medium', 'century gothic', 'Liberation Sans', sans-serif;
+}
+
+/* more mrmrs */
+a {
+  transition: color .4s;
+  color: #265C83;
+}
+a:link,
+a:visited { color: #265C83; }
+a:hover   { color: #7FDBFF; }
+a:active  {
+  transition: color .3s;
+  color: #007BE6;
+}
+.link { text-decoration: none; }
+/* /mrmrs */
+
+p {
+  margin-bottom: 1em;
+}
+
+b {
+  font-style: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+header {
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+
+  border-bottom: 1px solid #ddd;
+
+  background: #000;
+  color: #fff;
+}
+
+content {
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 3px 20px 0 20px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  justify-content: center;
+}
+
+aside {
+  flex: 0 0 12em;
+
+  text-align: right;
+  align-self: flex-end;
+}
+
+footer {
+  display: flex;
+  order: 3;
+
+  align-self: flex-end;
+  align-items: center;
+
+  min-height: 20px;
+  padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+  content {
+    flex-direction: column;
+  }
+  aside {
+    flex: 1;
+    order: 2;
+  }
+}
+
+.copyleft {
+  font-weight: 700;
+
+  display: inline-block;
+  transform: rotate(180deg);
+
+  overflow: hidden;
+
+  position: relative;
+  top: 1px;
+}
+
+@-moz-document url-prefix() {
+  .copyleft {
+    top: 2px;
+  }
+}
